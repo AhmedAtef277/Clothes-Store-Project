@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "40970C3B-48DD-48F1-871B-EC9C681B3EF0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09820310-6583-4CBE-85C9-5E7E39C366EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClothesStore/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BBB39C3-B6E7-403E-AD9A-1CC031E9130E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClothesStore/SeifViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "SeifViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4BBB39C3-B6E7-403E-AD9A-1CC031E9130E - 5f48e95ed452b04c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClothesStore.SeifViewController.productsCollectionView.getter : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "ClothesStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seifawad/Documents/GitHub/Clothes-Store-Project/ClothesStore/SeifViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "4BBB39C3-B6E7-403E-AD9A-1CC031E9130E - 1d7ea35f05953880"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClothesStore.SeifViewController.productsCollectionView.setter : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "ClothesStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seifawad/Documents/GitHub/Clothes-Store-Project/ClothesStore/SeifViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "4BBB39C3-B6E7-403E-AD9A-1CC031E9130E - 7e8d26a791060183"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClothesStore.SeifViewController.productsCollectionView.modify : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "ClothesStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seifawad/Documents/GitHub/Clothes-Store-Project/ClothesStore/SeifViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "4BBB39C3-B6E7-403E-AD9A-1CC031E9130E - e3887a2928aaa073"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClothesStore.SeifViewController.productsCollectionView.modify : Swift.Optional&lt;__C.UICollectionView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ClothesStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seifawad/Documents/GitHub/Clothes-Store-Project/ClothesStore/SeifViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "4BBB39C3-B6E7-403E-AD9A-1CC031E9130E - d809d82439b85d91"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClothesStore.SeifViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ClothesStore.SeifViewController"
+                  moduleName = "ClothesStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seifawad/Documents/GitHub/Clothes-Store-Project/ClothesStore/SeifViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "4BBB39C3-B6E7-403E-AD9A-1CC031E9130E - 4742c5444701fdae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClothesStore.SeifViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ClothesStore.SeifViewController&gt;"
+                  moduleName = "ClothesStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seifawad/Documents/GitHub/Clothes-Store-Project/ClothesStore/SeifViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "352">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F862EA3-6F49-49EC-B680-8E0C26D18B4C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClothesStore/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "application(_:configurationForConnecting:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DE970F0-091B-4DB6-9007-088C5F59375B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClothesStore/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
