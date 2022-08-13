@@ -31,6 +31,28 @@ func userExists(email:String, password: String) -> Int
     return id
 }
 
+func getById(id:Int) -> User
+{
+    var usr = User(context: context)
+
+        do
+        {
+        users = try  context.fetch(User.fetchRequest())
+        print("users count = \(users.count)")
+        for user in users{
+            print("Email= \(user.email!) .. Password= \(user.password!)")
+            if id == user.identifier
+            {
+                usr = user
+                break
+                print("Succeededdd")
+            }
+            
+        }
+    } catch  {  }
+    return usr
+}
+
 func InsertUser(email:String,password:String,address:String,phoneNum:Int, name:String)
 {
     let newUser = User(context: context)
