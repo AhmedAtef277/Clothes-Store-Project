@@ -62,8 +62,8 @@
             filePath = "ClothesStore/productCoreDataFns.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "queryCart()"
             landmarkType = "9">
          </BreakpointContent>
