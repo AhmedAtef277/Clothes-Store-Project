@@ -9,11 +9,14 @@ import UIKit
 
 class DetailsVC: UIViewController {
     
-// MARK: OUTLETS
+    // MARK: OUTLETS
     @IBOutlet var sizeButtons: [UIButton]!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var favouriteButton: UIImageView!
     @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var productDescription: UILabel!
     @IBOutlet weak var detailsView: UIView!
     
     @IBOutlet weak var grayColor: UIButton!
@@ -28,17 +31,44 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var xlSize: UIButton!
     // MARK: View life cycle
     
+    
+    var productDetails : Product?
+    var productNumber : Int = 0
+    var selectedProductColor = "red"
+    var selectedProductSize = "L"
+    
+    
+    //    init(productDetails : Product = Product()) {
+    //        self.productDetails = productDetails
+    //        super.init(nibName: nil, bundle: nil)
+    //    }
+    //
+    //    required init?(coder: NSCoder) {
+    //        fatalError("init(coder:) has not been implemented")
+    //    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configuerView()
         updataUi()
         
     }
-    // MARK: IBActions
     
-
+    
     // MARK: functions
-   private func updataUi(){
+    
+    private func configuerView(){
+        
+        guard let productDetails = productDetails else {
+            return
+        }
+        
+        productImage.image = UIImage(named: productDetails.image ?? "")
+        productName.text = productDetails.name
+        productDescription.text = productDetails.prodDescription
+        productPrice.text = "\(productDetails.price)"
+    }
+    private func updataUi(){
         [grayColor,yellowColor,cyanColor,pinkColor].forEach { button in
             button?.addTarget(self, action: #selector(selectColorButton(sender:)), for: .touchUpInside)
         }
@@ -49,10 +79,12 @@ class DetailsVC: UIViewController {
         detailsViewProperties()
     }
     @objc func selectColorButton(sender : UIButton){
-         setColorButtonsUnselected()
+        selectedProductColor = sender.accessibilityIdentifier ?? "red"
+        setColorButtonsUnselected()
         sender.setImage(UIImage(systemName: "circle.inset.filled"), for: .normal)
     }
     @objc func selectSizeButton(sender : UIButton){
+        selectedProductSize = sender.accessibilityIdentifier ?? "L"
         setSizeButtonsUnselected()
         sender.backgroundColor = .yellow
     }
@@ -67,7 +99,7 @@ class DetailsVC: UIViewController {
         self.detailsView.layer.cornerRadius = 30
         self.detailsView.layer.maskedCorners = [.layerMinXMinYCorner , .layerMaxXMinYCorner]
     }
-
+    
     
     private func setColorButtonsUnselected(){
         
@@ -83,7 +115,21 @@ class DetailsVC: UIViewController {
         }
     }
     
+    // MARK: IBActions
+    
+    
+    @IBAction func addToCartButton(_ sender: Any) {
+        updateColor(productNumber: productNumber, productColor: selectedProductColor)
+        updateSize(productNumber: productNumber, productSize: selectedProductSize)
+        addToCart(productNumber: productNumber)
+        self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+}
 
 
 

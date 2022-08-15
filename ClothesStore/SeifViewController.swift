@@ -80,6 +80,16 @@ class SeifViewController: ViewController {
     }
         
         
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let selectedItem = products[indexPath.row]
+                        
+            let detailsVC = UIStoryboard(name: "AhmedStoryboard", bundle: nil).instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
+            detailsVC.productDetails = selectedItem
+            detailsVC.productNumber = indexPath.row
+            self.present(detailsVC, animated: true, completion: nil)
+        }
+        
+        
     }
 
 

@@ -17,9 +17,13 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var sizeButton: UILabel!
     // MARK: Variables
-    var counterHelper = 0
-    
-    
+    var counterHelper:Int = 0
+    var productPrice = 0
+    var removeProduct:((IndexPath)->Void)? = nil
+    var increaseTotalPrice:((Double)->Void)? = nil
+    var decreaseTotalPrice:((Double)->Void)? = nil
+    var productIndex: IndexPath?
+    var productTotalPrice: Double = 0.0
     // MARK: Life cycle
     
     override func awakeFromNib() {
@@ -41,10 +45,15 @@ class CartTableViewCell: UITableViewCell {
         sizeButton.layer.borderColor = UIColor.darkGray.cgColor
         sizeButton.layer.borderWidth = 0.8
     }
-    func setUpCell(model : Model){
-        productImage.image = model.image
-        priceLabel.text = "\(model.price)"
-        descreptionLabel.text = model.descreption
+    func setUpCell(productDetailsModel : Product){
+        productPrice = Int(productDetailsModel.price)
+        counterHelper = Int(productDetailsModel.prodCount)
+        productTotalPrice = Double(productDetailsModel.price * 1)
+        sizeButton.text = productDetailsModel.size
+        productImage.image = UIImage(named: productDetailsModel.image ?? "") 
+        priceLabel.text = "\(productDetailsModel.price)"
+        descreptionLabel.text = productDetailsModel.prodDescription
+        counterLabel.text = "\(productDetailsModel.prodCount)"
     }
 
     // MARK: IBAtions
@@ -52,18 +61,30 @@ class CartTableViewCell: UITableViewCell {
     @IBAction func plusButtonTapped(_ sender: UIButton) {
         counterHelper += 1
         counterLabel.text = "\(counterHelper)"
+        productTotalPrice = Double(1 * productPrice)
+        increaseTotalPrice?(productTotalPrice)
+        guard let index = productIndex?.row else{
+            return
+        }
+        addToCart(productNumber: index)
+
     }
     
     @IBAction func minusButtonTapped(_ sender: UIButton) {
         
         if counterHelper >= 1 {
-        counterHelper -= 1
-        counterLabel.text = "\(counterHelper)"
+            counterHelper -= 1
+            counterLabel.text = "\(counterHelper)"
+            productTotalPrice = Double(1 * productPrice)
+            decreaseTotalPrice?(productTotalPrice)
         }else{
             counterLabel.endEditing(true)
-
         }
-
+        guard let index = productIndex?.row else{
+            return
+        }
+        removeFromCart(productNumber: index)
     }
     
 }
+
