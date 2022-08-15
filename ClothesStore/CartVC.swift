@@ -14,17 +14,24 @@ class CartVC: UIViewController {
 // MARK: life cycle
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var subTotalPriceLabel: UILabel!
+    @IBOutlet weak var shippingLabel: UILabel!
+    
+ 
     
     var calculateTotalPrice: Double = 0.0{
         didSet{
             subTotalPriceLabel.text = "\(calculateTotalPrice)"
             totalPriceLabel.text = "\(calculateTotalPrice + 5.0)"
+            if calculateTotalPrice == 0 {
+                totalPriceLabel.text = "0.0"
+            }
         }
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        shippingLabel.text = "5.0"
         cartTableView.dataSource = self
         cartTableView.delegate = self
     }
@@ -36,21 +43,7 @@ class CartVC: UIViewController {
         cartProductList = queryCart()
         cartTableView.reloadData()
     }
-    
-    private func onRemoveProduct(indexPath:IndexPath){
-        if indexPath.row > 0 {
-            self.cartProductList.remove(at: indexPath.row)
-            cartTableView.deleteRows(at: [indexPath], with: .automatic)
-        }else{
-            self.cartProductList.remove(at: 0)
-            cartProductList = queryCart()
-        }
-        removeFromCart(productNumber: indexPath.row)
-        cartTableView.reloadData()
-        //self.cartTableView.beginUpdates()
-       // cartTableView.endUpdates()
-    }
-    
+
 
 }
 extension CartVC : UITableViewDataSource {
@@ -64,9 +57,12 @@ extension CartVC : UITableViewDataSource {
         let cartData = cartProductList[indexPath.row]
         cell.setUpCell(productDetailsModel: cartData)
         cell.productIndex = indexPath
+        cell.productItem = cartProductList[indexPath.row]
         calculateTotalPrice += Double(cartProductList[indexPath.row].price * cartProductList[indexPath.row].prodCount)
         cell.removeProduct = { (indexPath) in
-            self.onRemoveProduct(indexPath: indexPath)
+            self.calculateTotalPrice = 0
+            self.cartProductList = queryCart()
+            self.cartTableView.reloadData()
         }
         cell.increaseTotalPrice = { (totlaPrice) in
             self.calculateTotalPrice += totlaPrice
@@ -79,23 +75,25 @@ extension CartVC : UITableViewDataSource {
     
 }
 extension CartVC : UITableViewDelegate {
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        cartProductList.swapAt(sourceIndexPath.row, destinationIndexPath.row)
-    }
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let remove = UIContextualAction(style: .destructive, title: "Remove") {[weak self] _, _, _ in
-            self?.cartProductList.remove(at: indexPath.row)
-                       self?.cartTableView.beginUpdates()
-            removeFromCart(productNumber: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-            tableView.endUpdates()
-        }
-        remove.image = UIImage(systemName: "minus.circle")
-        return UISwipeActionsConfiguration(actions: [remove])
-}
+//    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        cartProductList.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+//    }
+//
+//
+//    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        print("self?.cartProductList[indexPath.row] is \(self.cartProductList.count)")
+//        let remove = UIContextualAction(style: .destructive, title: "Remove") {[weak self] _, _, _ in
+//            removeFromCart(x: self?.cartProductList[indexPath.row] ?? Product())
+//            self?.cartTableView.beginUpdates()
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//            tableView.endUpdates()
+//        }
+//        remove.image = UIImage(systemName: "minus.circle")
+//        return UISwipeActionsConfiguration(actions: [remove])
+//}
 }
 
 //struct Model {

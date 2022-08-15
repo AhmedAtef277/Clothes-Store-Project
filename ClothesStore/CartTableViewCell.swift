@@ -24,6 +24,8 @@ class CartTableViewCell: UITableViewCell {
     var decreaseTotalPrice:((Double)->Void)? = nil
     var productIndex: IndexPath?
     var productTotalPrice: Double = 0.0
+    var productItem = Product()
+
     // MARK: Life cycle
     
     override func awakeFromNib() {
@@ -66,24 +68,29 @@ class CartTableViewCell: UITableViewCell {
         guard let index = productIndex?.row else{
             return
         }
-        addToCart(productNumber: index)
+        addToCart(x: productItem)
 
     }
     
     @IBAction func minusButtonTapped(_ sender: UIButton) {
         
-        if counterHelper >= 1 {
+        if counterHelper > 1 {
             counterHelper -= 1
             counterLabel.text = "\(counterHelper)"
             productTotalPrice = Double(1 * productPrice)
             decreaseTotalPrice?(productTotalPrice)
+            removeFromCart(x: productItem)
+        }else if counterHelper == 1{
+            counterHelper -= 1
+            counterLabel.text = "\(counterHelper)"
+            productTotalPrice = Double(1 * productPrice)
+            decreaseTotalPrice?(productTotalPrice)
+            removeFromCart(x: productItem)
+            removeProduct?(productIndex ?? IndexPath())
         }else{
             counterLabel.endEditing(true)
         }
-        guard let index = productIndex?.row else{
-            return
-        }
-        removeFromCart(productNumber: index)
+        
     }
     
 }

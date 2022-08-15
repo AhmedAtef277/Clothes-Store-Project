@@ -121,7 +121,7 @@ class DetailsVC: UIViewController {
     @IBAction func addToCartButton(_ sender: Any) {
         updateColor(productNumber: productNumber, productColor: selectedProductColor)
         updateSize(productNumber: productNumber, productSize: selectedProductSize)
-        addToCart(productNumber: productNumber)
+        addToCart(x: productDetails ?? Product())
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func backButton(_ sender: Any) {
