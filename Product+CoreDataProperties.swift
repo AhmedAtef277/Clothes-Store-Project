@@ -24,6 +24,7 @@ extension Product {
     @NSManaged public var color: String?
     @NSManaged public var isAddedToCart: Bool
     @NSManaged public var prodCount: Int64
+    @NSManaged public var productNumber: Int64
 
 }
 

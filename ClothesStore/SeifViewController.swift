@@ -30,6 +30,10 @@ class SeifViewController: ViewController {
         prPrices = [products[0].price,products[1].price, products[2].price, products[3].price]
         
         
+        addToCart(productNumber: Int(products[0].productNumber))
+        addToCart(productNumber: Int(products[0].productNumber))
+        
+        removeFromCart(productNumber: Int(products[0].productNumber))
         
         
 
