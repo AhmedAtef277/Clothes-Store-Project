@@ -128,14 +128,13 @@ func updateColor(productNumber: Int, productColor: String )  {
  
 }
 
-func addToCart(productNumber: Int)  {
-    let product = products[productNumber]
+func addToCart(x: Product)  {
     
-    product.isAddedToCart = true
+    x.isAddedToCart = true
     
-    product.prodCount = product.prodCount + 1
+    x.prodCount = x.prodCount + 1
     
-    print(product.prodCount)
+    print(x.prodCount)
      do {
      try context.save()
      } catch {
@@ -144,11 +143,10 @@ func addToCart(productNumber: Int)  {
  
 }
 
-func removeFromCart(productNumber: Int)  {
-    let product = products[productNumber]
+func removeFromCart(x: Product)  {
     
-    if(product.isAddedToCart) {
-    product.prodCount = product.prodCount - 1
+    if(x.isAddedToCart) {
+    x.prodCount = x.prodCount - 1
   
         
     }
@@ -156,11 +154,11 @@ func removeFromCart(productNumber: Int)  {
         print("This product does not exist in the cart")
     }
     
-    if(product.prodCount == 0){
-        product.isAddedToCart = false
+    if(x.prodCount == 0){
+        x.isAddedToCart = false
     }
     
-    print(product.prodCount)
+    print(x.prodCount)
     
      do {
      try context.save()
