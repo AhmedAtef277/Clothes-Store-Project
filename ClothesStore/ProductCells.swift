@@ -16,6 +16,10 @@ class ProductCells: UICollectionViewCell {
    
     @IBOutlet weak var productViewShape: UIView!
     
+    @IBOutlet weak var productNameLbl: UILabel!
+    
+    
+    @IBOutlet weak var productPriceLbl: UILabel!
     
 }
 

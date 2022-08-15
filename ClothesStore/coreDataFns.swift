@@ -55,10 +55,10 @@ func getById(id:Int) -> User
 
 func InsertUser(email:String,password:String,address:String,phoneNum:Int, name:String)
 {
+    userId += 1
     let newUser = User(context: context)
     newUser.identifier = Int64(userId)
     newUser.name = name
-    userId += 1
     newUser.email = email
     newUser.password = password
     newUser.address = address

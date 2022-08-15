@@ -8,23 +8,40 @@
 import UIKit
 import CoreData
 
+var p = [String?]() //string for product images
+var t = [String?]() //string for product name
+var prPrices = [Int64]() //intfor product prices
+
 class SeifViewController: ViewController {
-    
-    let products = ["waffleDropImage1", "stripedShirtImage2",  "oversizeWhiteTImage3","brownHalfSleeveImage4"]
-    
-    
-    
     
    
     @IBOutlet weak var productsCollectionView: UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(!productsExists())
+        {
+            addProductsToCoreData()
+        }
+        getData()
+        print(products.count)
         
+        p = [products[0].image,products[1].image, products[2].image, products[3].image]
+        t = [products[0].name,products[1].name, products[2].name, products[3].name]
+        prPrices = [products[0].price,products[1].price, products[2].price, products[3].price]
+        
+        
+        
+        
+
+
         productsCollectionView.delegate = self
     
         
         productsCollectionView.dataSource = self
+        
+        
+      
+        
         
         
         
@@ -33,29 +50,7 @@ class SeifViewController: ViewController {
     }
     
 }
-/*
-class SeifViewController: ViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return 1
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (products.count);
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "ProductCells", for: indexPath) as! ProductCells
-        
-        cell.productImageView.image = UIImage(named: products[indexPath.row])
-      
-        
-        return cell
-    }
 
-*/
-////////////////////////////////////////////////////////////////////////////////////////
     
     extension SeifViewController: UICollectionViewDelegate, UICollectionViewDataSource
     {
@@ -67,14 +62,16 @@ class SeifViewController: ViewController, UICollectionViewDataSource, UICollecti
         }
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (products.count);
+        return (p.count);
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = productsCollectionView.dequeueReusableCell(withReuseIdentifier: "ProductCells", for: indexPath) as! ProductCells
         
-        cell.productImageView.image = UIImage(named: products[indexPath.row])
+        cell.productImageView.image = UIImage(named: p[indexPath.row]!)
+        cell.productNameLbl.text = t[indexPath.row]!
+        cell.productPriceLbl.text = "$ " + String(prPrices[indexPath.row])
         
         cell.productViewShape.layer.cornerRadius = 10
       
@@ -84,6 +81,9 @@ class SeifViewController: ViewController, UICollectionViewDataSource, UICollecti
         
         
     }
+
+
+
 
     /*
     // MARK: - Navigation
