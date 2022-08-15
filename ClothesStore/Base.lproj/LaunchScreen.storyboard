@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -15,8 +15,39 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="2an-8x-diG">
+                                <rect key="frame" x="-28" y="148" width="470" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="8rd-uh-lwY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Clothes Collection!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuR-iq-Bba">
+                                <rect key="frame" x="57" y="453" width="301" height="98"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fashion is a form of self-expression and autonomy at a particular period &amp; place and in a specific content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNY-uz-vEq">
+                                <rect key="frame" x="57" y="565" width="301" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="nuR-iq-Bba" firstAttribute="top" secondItem="2an-8x-diG" secondAttribute="bottom" constant="49" id="6qU-tW-nce"/>
+                            <constraint firstItem="2an-8x-diG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-28" id="IUm-8J-3Dy"/>
+                            <constraint firstAttribute="trailing" secondItem="2an-8x-diG" secondAttribute="trailing" constant="-28" id="Ibm-aF-Pyi"/>
+                            <constraint firstItem="nuR-iq-Bba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="RMN-1B-Y61"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mNY-uz-vEq" secondAttribute="trailing" constant="56" id="c6A-Jb-fgR"/>
+                            <constraint firstItem="2an-8x-diG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="hTT-Ih-ayp"/>
+                            <constraint firstItem="mNY-uz-vEq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="jam-3L-AJm"/>
+                            <constraint firstItem="mNY-uz-vEq" firstAttribute="top" secondItem="nuR-iq-Bba" secondAttribute="bottom" constant="14" id="kXi-As-LaI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nuR-iq-Bba" secondAttribute="trailing" constant="56" id="vuv-nS-RDs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MVA-KF-gGM"/>
                 </viewController>
@@ -26,8 +57,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="splash" width="1600" height="718"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -45,29 +45,62 @@ func getById(id:Int) -> User
             {
                 usr = user
                 break
-                print("Succeededdd")
             }
             
         }
     } catch  {  }
     return usr
 }
+var id:Int64 = 0
 
-func InsertUser(email:String,password:String,address:String,phoneNum:Int, name:String)
+func InsertUser(email:String,password:String, name:String)
 {
     let newUser = User(context: context)
     newUser.identifier = Int64(userId)
     newUser.name = name
-    userId += 1
     newUser.email = email
     newUser.password = password
-    newUser.address = address
-    newUser.phoneNum = Int64(phoneNum)
+    do{
+        let users = try context.fetch(User.fetchRequest())
+        for user in users{
+            id = user.identifier
+        }
+        
+    }catch
+    {
+    }
+    newUser.identifier = id+1
     do
     {
             try context.save()
         let userss = try  context.fetch(User.fetchRequest())
         print("users count = \(userss.count)")
+        for user in userss
+        {
+            print("\(user.identifier)")
+        }
     } catch { }
 }
 
+func deleteUsers()
+{
+        do
+        {
+            let users = try  context.fetch(User.fetchRequest()) as [User]
+        for user in users{
+            context.delete(user)
+            do
+            {
+            try context.save()
+                
+            }
+            catch {  }
+
+        }
+            print("users count = \(users.count)")
+
+            
+    }
+    catch  {  }
+    
+}
