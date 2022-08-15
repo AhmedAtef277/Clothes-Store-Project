@@ -44,6 +44,7 @@ func addProductsToCoreData()
     newProduct.prodCount = 0
     newProduct.prodDescription = "Men's High Quality T-Shirt!"
     newProduct.color = "blue";
+    newProduct.productNumber = 0
     
     let newProduct2 = Product(context: context)
     //second product
@@ -55,6 +56,7 @@ func addProductsToCoreData()
     newProduct2.prodCount = 0
     newProduct2.prodDescription = "Men's High Quality Striped Shirt!"
     newProduct2.color = "blue";
+    newProduct2.productNumber = 1
     
     let newProduct3 = Product(context: context)
     //third product
@@ -66,6 +68,7 @@ func addProductsToCoreData()
     newProduct3.prodCount = 0
     newProduct3.prodDescription = "Men's High Quality Oversized T-Shrit from the Oversized Collection!"
     newProduct3.color = "blue";
+    newProduct3.productNumber = 2
     
     let newProduct4 = Product(context: context)
     //fourth product
@@ -77,6 +80,7 @@ func addProductsToCoreData()
     newProduct4.prodCount = 0
     newProduct4.prodDescription = "Authentic Men's Half Sleeve Shirt from the new collection!"
     newProduct4.color = "blue";
+    newProduct4.productNumber = 3
     
     do
     {
@@ -126,6 +130,7 @@ func updateColor(productNumber: Int, productColor: String )  {
 
 func addToCart(productNumber: Int)  {
     let product = products[productNumber]
+    
     product.isAddedToCart = true
     
     product.prodCount = product.prodCount + 1
