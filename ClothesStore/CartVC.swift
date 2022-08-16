@@ -34,6 +34,9 @@ class CartVC: UIViewController {
         shippingLabel.text = "5.0"
         cartTableView.dataSource = self
         cartTableView.delegate = self
+      
+
+
     }
     
     
@@ -42,6 +45,9 @@ class CartVC: UIViewController {
         calculateTotalPrice = 0
         cartProductList = queryCart()
         cartTableView.reloadData()
+
+        
+
     }
 
 

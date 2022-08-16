@@ -199,5 +199,21 @@ func queryCart() -> [Product] {
 }
 
 
+func zeroCart() {
+    for product in products {
+        product.isAddedToCart = false
+        product.prodCount = 0
+
+        
+    }
+    
+    
+
+     do {
+     try context.save()
+     } catch {
+
+     }
+}
 
 

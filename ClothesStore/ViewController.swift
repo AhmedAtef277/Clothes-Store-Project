@@ -24,16 +24,17 @@ func showAlert(msg:String, vc:UIViewController)
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var emailLogIn: UITextField!
     @IBOutlet weak var passwordLogIn: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("Hi")
-       signInButton.layer.cornerRadius = 15
-        
+        //signInButton.layer.cornerRadius = 15
+        self.navigationItem.hidesBackButton = true
+
         
     }
     @IBAction func logInButton(_ sender: Any) {
