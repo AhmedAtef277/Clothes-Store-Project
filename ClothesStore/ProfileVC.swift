@@ -17,7 +17,7 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
 
       updateUi()
-        setuserInfo()
+    setuserInfo()
     }
     private func updateUi(){
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
