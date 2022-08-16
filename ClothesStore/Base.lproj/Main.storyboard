@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="logIn" id="BYZ-38-t0r" customClass="ViewController" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logIn" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,8 +122,8 @@
                             <constraint firstItem="EOh-xY-ZDZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="USs-1r-e9H"/>
                             <constraint firstItem="ClF-Em-Wz3" firstAttribute="top" secondItem="ODI-kp-FHK" secondAttribute="bottom" constant="8" symbolic="YES" id="Urn-Er-Bry"/>
                             <constraint firstItem="4oA-Yi-uGg" firstAttribute="centerY" secondItem="t4u-oD-rw4" secondAttribute="centerY" id="VHV-3q-U3e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UYE-Qu-sOK" secondAttribute="bottom" constant="48" id="VsL-H7-2FU"/>
                             <constraint firstItem="5MW-dZ-d37" firstAttribute="top" secondItem="WUq-Jk-aZx" secondAttribute="bottom" constant="29" id="bLz-Kf-Nb3"/>
-                            <constraint firstItem="UYE-Qu-sOK" firstAttribute="top" secondItem="4oA-Yi-uGg" secondAttribute="bottom" constant="18" id="cTd-hK-hht"/>
                             <constraint firstItem="ubQ-WF-2fA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="eln-WG-CvT"/>
                             <constraint firstItem="3y7-jc-RRG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="k9I-Tk-awx"/>
                             <constraint firstItem="WUq-Jk-aZx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="kPq-9A-VUF"/>
@@ -136,7 +136,7 @@
                     <connections>
                         <outlet property="emailLogIn" destination="WUq-Jk-aZx" id="ggN-z9-Rxl"/>
                         <outlet property="passwordLogIn" destination="EOh-xY-ZDZ" id="kq1-iL-HJZ"/>
-                        <outlet property="signInButton" destination="UYE-Qu-sOK" id="2Sj-cQ-nft"/>
+                        <outlet property="signInButton" destination="UYE-Qu-sOK" id="fjz-Zs-4ue"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -164,7 +164,7 @@
         <!--Register-->
         <scene sceneID="dRd-Lw-Q65">
             <objects>
-                <viewController id="ijN-Nt-QqM" customClass="register" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ijN-Nt-QqM" customClass="register" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sZ8-BH-1gO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,7 +202,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOF-We-bVU">
-                                <rect key="frame" x="36.5" y="759" width="341" height="45"/>
+                                <rect key="frame" x="36.5" y="769" width="341" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="NWa-7S-Nwh"/>
@@ -255,6 +255,7 @@
                             <constraint firstItem="x6a-5X-Lwx" firstAttribute="leading" secondItem="JcI-FW-4Dn" secondAttribute="leading" constant="37" id="2nn-lM-boL"/>
                             <constraint firstItem="lUk-lv-5U8" firstAttribute="top" secondItem="LuN-bY-aX9" secondAttribute="bottom" constant="6" id="3tP-ul-cel"/>
                             <constraint firstItem="JcI-FW-4Dn" firstAttribute="trailing" secondItem="P97-NH-PgW" secondAttribute="trailing" constant="28" id="6bI-0C-4tQ"/>
+                            <constraint firstItem="JcI-FW-4Dn" firstAttribute="bottom" secondItem="tOF-We-bVU" secondAttribute="bottom" constant="48" id="87V-YM-7lY"/>
                             <constraint firstItem="LuN-bY-aX9" firstAttribute="leading" secondItem="JcI-FW-4Dn" secondAttribute="leading" constant="37" id="9X9-X2-EXJ"/>
                             <constraint firstItem="dK1-Ry-jJr" firstAttribute="leading" secondItem="JcI-FW-4Dn" secondAttribute="leading" constant="37" id="Dg6-pc-nGZ"/>
                             <constraint firstItem="FLB-gK-AV1" firstAttribute="leading" secondItem="JcI-FW-4Dn" secondAttribute="leading" constant="37" id="IMb-pX-BfO"/>
@@ -279,7 +280,6 @@
                             <constraint firstItem="JcI-FW-4Dn" firstAttribute="trailing" secondItem="x6a-5X-Lwx" secondAttribute="trailing" constant="37" id="uPj-nX-Edz"/>
                             <constraint firstItem="dK1-Ry-jJr" firstAttribute="top" secondItem="Dmz-Oh-hvf" secondAttribute="bottom" constant="6" id="uzH-md-HIg"/>
                             <constraint firstItem="lUk-lv-5U8" firstAttribute="leading" secondItem="JcI-FW-4Dn" secondAttribute="leading" constant="37" id="vOT-y6-VqG"/>
-                            <constraint firstItem="tOF-We-bVU" firstAttribute="top" secondItem="x6a-5X-Lwx" secondAttribute="bottom" constant="99" id="zkz-6o-Ywe"/>
                         </constraints>
                     </view>
                     <connections>
