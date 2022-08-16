@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import CoreData
+
 
 var users: [User] = []
 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -25,6 +27,7 @@ func userExists(email:String, password: String) -> Int
             {
                 id = Int(user.identifier)
                 print("Succeededdd")
+                break
             }
         }
     } catch  {  }
@@ -33,29 +36,32 @@ func userExists(email:String, password: String) -> Int
 
 func getById(id:Int) -> User
 {
-    var usr = User(context: context)
-
+    let usr = NSEntityDescription.entity(forEntityName: "User",
+            in: context)!
+    var uninsertedItem = User(entity: usr, insertInto:nil)
         do
         {
-        users = try  context.fetch(User.fetchRequest())
-        print("users count = \(users.count)")
-        for user in users{
-            print("Email= \(user.email!) .. Password= \(user.password!)")
-            if id == user.identifier
+            users = try  context.fetch(User.fetchRequest())
+            print("usersCount in getbyid \(users.count)")
+            for user in users
             {
-                usr = user
-                break
-            }
+                if id == user.identifier
+                {
+                    print("Email= \(user.email!)..Password=\(user.password!),...userId = \(user.identifier)")
+
+                    uninsertedItem = user
+                    break
+
+                }
             
-        }
-    } catch  {  }
-    return usr
+            }
+        }    catch  {  }
+    return uninsertedItem
 }
 var id:Int64 = 0
 
 func InsertUser(email:String,password:String, name:String)
 {
-    userId += 1
     let newUser = User(context: context)
     newUser.identifier = Int64(userId)
     newUser.name = name
@@ -63,19 +69,16 @@ func InsertUser(email:String,password:String, name:String)
     newUser.password = password
     do{
         let users = try context.fetch(User.fetchRequest())
-        for user in users{
-            id = user.identifier
-        }
+        newUser.identifier = Int64(users.count)
+
         
     }catch
     {
     }
-    newUser.identifier = id+1
     do
     {
             try context.save()
         let userss = try  context.fetch(User.fetchRequest())
-        print("users count = \(userss.count)")
         for user in userss
         {
             print("\(user.identifier)")
