@@ -46,6 +46,8 @@ class CartTableViewCell: UITableViewCell {
         
         sizeButton.layer.borderColor = UIColor.darkGray.cgColor
         sizeButton.layer.borderWidth = 0.8
+       //self.navigationItem.setHidesBackButton(true, animated: true);
+
     }
     func setUpCell(productDetailsModel : Product){
         productPrice = Int(productDetailsModel.price)

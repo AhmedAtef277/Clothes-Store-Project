@@ -2,7 +2,7 @@
 //  ProfileVC.swift
 //  ClothesStore
 //
-//  Created by mac on 12/08/2022.
+//  Created by Ahmed Atef on 12/08/2022.
 //
 
 import UIKit
@@ -20,9 +20,16 @@ class ProfileVC: UIViewController {
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
         profileInfoView.layer.cornerRadius = 30
         profileInfoView.layer.maskedCorners = [.layerMinXMinYCorner , .layerMaxXMinYCorner]
+        self.navigationItem.setHidesBackButton(true, animated: true);
+
     }
     
 
     
-
+    @IBAction func logoutButtonTapped(_ sender: UIButton) {
+        zeroCart()
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "logIn")
+        present(loginVC, animated: true, completion: nil)
+    }
+    
 }
