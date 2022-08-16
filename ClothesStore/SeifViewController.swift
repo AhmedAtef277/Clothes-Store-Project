@@ -15,9 +15,11 @@ var prPrices = [Int64]() //intfor product prices
 class SeifViewController: ViewController {
     
    
+    @IBOutlet weak var hiName: UILabel!
     @IBOutlet weak var productsCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        hiName.text = "Hi, \(theUser.name!)"
         if(!productsExists())
         {
             addProductsToCoreData()
@@ -36,7 +38,7 @@ class SeifViewController: ViewController {
      //   removeFromCart(x: products[0])
         
         
-
+        self.tabBarController?.navigationItem.hidesBackButton = true
 
         productsCollectionView.delegate = self
     
