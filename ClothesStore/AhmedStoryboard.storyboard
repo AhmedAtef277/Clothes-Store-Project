@@ -151,7 +151,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-NN-7w2">
-                                                <rect key="frame" x="57.333333333333329" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="53" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="S"/>
                                                 <constraints>
@@ -171,7 +171,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xp-2S-aX2">
-                                                <rect key="frame" x="114.66666666666666" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="106" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="M"/>
                                                 <constraints>
@@ -191,7 +191,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-cf-UV2">
-                                                <rect key="frame" x="171.66666666666666" y="0.0" width="33" height="50"/>
+                                                <rect key="frame" x="159" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="L"/>
                                                 <constraints>
@@ -466,8 +466,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="WKP-co-wnw"/>
                     <connections>
+                        <outlet property="email" destination="BXO-rK-PTT" id="k0t-bQ-CQY"/>
                         <outlet property="profileImage" destination="Uaz-X4-EFH" id="1eN-ZT-n8C"/>
                         <outlet property="profileInfoView" destination="FTj-hi-FUF" id="R6s-tA-hfp"/>
+                        <outlet property="userName" destination="tli-uP-ms5" id="6T7-RJ-l4H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="236-ds-SkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
