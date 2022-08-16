@@ -366,7 +366,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstItem="Uaz-X4-EFH" firstAttribute="centerY" secondItem="D0f-lO-Ewz" secondAttribute="centerY" id="bQ5-hV-mGK"/>
                                     <constraint firstItem="jtU-fF-brg" firstAttribute="centerX" secondItem="D0f-lO-Ewz" secondAttribute="centerX" id="kVP-eZ-bRg"/>
@@ -378,7 +378,7 @@
                                 <rect key="frame" x="0.0" y="327.5" width="414" height="485.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="djM-bn-KPE">
-                                        <rect key="frame" x="20" y="30" width="374" height="302"/>
+                                        <rect key="frame" x="20" y="30" width="374" height="141"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y6K-gf-gD4">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="60.5"/>
@@ -389,10 +389,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tli-uP-ms5">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeyad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tli-uP-ms5">
                                                         <rect key="frame" x="0.0" y="40" width="374" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" systemColor="systemOrangeColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -406,56 +406,43 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXO-rK-PTT">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zeyad@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXO-rK-PTT">
                                                         <rect key="frame" x="0.0" y="40" width="374" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p27-Ex-AEY">
-                                                <rect key="frame" x="0.0" y="161" width="374" height="60.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcE-FK-9Tm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrd-Pq-5cM">
-                                                        <rect key="frame" x="0.0" y="40" width="374" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yth-lK-coA">
-                                                <rect key="frame" x="0.0" y="241.5" width="374" height="60.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnt-hJ-69n">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqV-tE-oZO">
-                                                        <rect key="frame" x="0.0" y="40" width="374" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" systemColor="systemOrangeColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLL-Oa-4lj">
+                                        <rect key="frame" x="160.5" y="402" width="93" height="35"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Log Out">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="qO6-38-Jzd" kind="show" id="y7T-CE-dto"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="djM-bn-KPE" firstAttribute="leading" secondItem="FTj-hi-FUF" secondAttribute="leading" constant="20" id="MHW-qK-kky"/>
+                                    <constraint firstItem="TLL-Oa-4lj" firstAttribute="leading" secondItem="FTj-hi-FUF" secondAttribute="leading" constant="160.5" id="dXq-eU-fnO"/>
+                                    <constraint firstAttribute="trailing" secondItem="TLL-Oa-4lj" secondAttribute="trailing" constant="160.5" id="djf-0R-Zg6"/>
                                     <constraint firstItem="djM-bn-KPE" firstAttribute="top" secondItem="FTj-hi-FUF" secondAttribute="top" constant="30" id="dvt-sK-zN2"/>
                                     <constraint firstAttribute="trailing" secondItem="djM-bn-KPE" secondAttribute="trailing" constant="20" id="w7V-WE-8m8"/>
+                                    <constraint firstItem="TLL-Oa-4lj" firstAttribute="top" secondItem="djM-bn-KPE" secondAttribute="bottom" constant="231" id="wr3-1M-v86"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -481,6 +468,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="236-ds-SkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1032" y="968"/>
+        </scene>
+        <!--logIn-->
+        <scene sceneID="vsy-OX-xRW">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="logIn" storyboardName="Main" referencedIdentifier="logIn" id="qO6-38-Jzd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="clV-ec-QjZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1r1-p9-eIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="1450"/>
         </scene>
         <!--CartVC-->
         <scene sceneID="Nde-El-AY5">
