@@ -18,8 +18,13 @@ class register: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerButton.layer.cornerRadius = 15
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
 
-        // Do any additional setup after loading the view.
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 
