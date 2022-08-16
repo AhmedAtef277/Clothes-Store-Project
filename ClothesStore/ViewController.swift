@@ -6,7 +6,13 @@
 //
 
 import UIKit
+import CoreData
 var userId:Int = 0
+
+var user = NSEntityDescription.entity(forEntityName: "User",
+    in: context)!
+var theUser = User(entity: user, insertInto:nil)
+
 
 func showAlert(msg:String, vc:UIViewController)
 {
@@ -44,15 +50,17 @@ class ViewController: UIViewController {
              return
          }
         
-        if userExists(email: email, password: pass) == -1
-        {
-            showAlert(msg: "Your email or password are'nt correct try again!",vc:self)
-        }
-        else
-        {
-            // move to the menu screen with user's Id
-            
-        }
+                userId = userExists(email: email, password: pass)
+                if  userId == -1
+                {
+                    showAlert(msg: "Your email or password are'nt correct try again!",vc:self)
+                }
+                else
+                {
+                    // move to the menu screen with user's Id
+                    
+                    theUser = getById(id: userId)
+                }
     }
     
     
