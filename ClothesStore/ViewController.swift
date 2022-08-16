@@ -33,7 +33,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("Hi")
         //signInButton.layer.cornerRadius = 15
-        
+        self.navigationItem.hidesBackButton = true
+
         
     }
     @IBAction func logInButton(_ sender: Any) {

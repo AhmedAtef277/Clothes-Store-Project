@@ -47,7 +47,7 @@ class SeifViewController: ViewController {
         
         
       
-        self.tabBarController?.navigationItem.hidesBackButton = true
+       // self.tabBarController?.navigationItem.hidesBackButton = true
         
         
         

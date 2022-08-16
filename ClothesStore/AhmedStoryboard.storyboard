@@ -43,7 +43,7 @@
         <!--DetailsVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="DetailsVC" id="Y6W-OH-hqX" customClass="DetailsVC" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsVC" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="DetailsVC" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,7 +151,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-NN-7w2">
-                                                <rect key="frame" x="53" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="54.666666666666671" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="S"/>
                                                 <constraints>
@@ -171,7 +171,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xp-2S-aX2">
-                                                <rect key="frame" x="106" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="109.33333333333334" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="M"/>
                                                 <constraints>
@@ -191,7 +191,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-cf-UV2">
-                                                <rect key="frame" x="159" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="163.66666666666666" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="L"/>
                                                 <constraints>
@@ -211,7 +211,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbK-6t-3Hd">
-                                                <rect key="frame" x="212" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="218.33333333333334" y="0.0" width="43.666666666666657" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="XL"/>
                                                 <constraints>
