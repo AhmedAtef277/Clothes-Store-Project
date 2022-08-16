@@ -13,11 +13,11 @@ class register: UIViewController {
     @IBOutlet weak var emailSignUp: UITextField!
     @IBOutlet weak var passwordSignUp: UITextField!
     @IBOutlet weak var cPasswordSignUp: UITextField!
-    @IBOutlet weak var phoneNum: UITextField!
-    @IBOutlet weak var addressSignUp: UITextField!
+
+    @IBOutlet weak var registerButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        registerButton.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
     }
     
@@ -44,16 +44,11 @@ class register: UIViewController {
         else{ showAlert(msg: "Please confirm your password right!",vc:self)
             return
         }
-        guard let address = addressSignUp.text, address != ""
-        else{ showAlert(msg: "Please enter your email!",vc:self)
-                return
-        }
-        guard let phoneNum = phoneNum.text, phoneNum != ""
-        else{ showAlert(msg: "Please enter your email!",vc:self)
-                return
-        }
         
-        InsertUser(email: email, password: pass, address: address, phoneNum: Int(phoneNum)!, name: name)
+        InsertUser(email: email, password: pass, name: name)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "logIn") as! ViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
     /*
     // MARK: - Navigation
