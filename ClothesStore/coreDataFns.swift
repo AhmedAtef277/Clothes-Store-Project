@@ -55,6 +55,7 @@ var id:Int64 = 0
 
 func InsertUser(email:String,password:String, name:String)
 {
+    userId += 1
     let newUser = User(context: context)
     newUser.identifier = Int64(userId)
     newUser.name = name

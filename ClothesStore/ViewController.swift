@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordLogIn: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("Hi")
@@ -61,4 +62,5 @@ class ViewController: UIViewController {
         
         
 }
+
 
