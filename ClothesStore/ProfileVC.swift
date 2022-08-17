@@ -34,6 +34,7 @@ class ProfileVC: UIViewController {
         let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "logIn")
         present(loginVC, animated: true, completion: nil)
     }
+    
     private func setuserInfo(){
         userName.text = theUser.name
         email.text = theUser.email

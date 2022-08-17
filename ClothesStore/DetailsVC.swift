@@ -29,14 +29,31 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var mSize: UIButton!
     @IBOutlet weak var lSize: UIButton!
     @IBOutlet weak var xlSize: UIButton!
+    @IBOutlet weak var inctreaseCounter: UIButton!
+    
+    @IBOutlet weak var decreaseCounter: UIButton!
+    @IBOutlet weak var productCount: UILabel!
+    
+    
     // MARK: View life cycle
     
     
-    var productDetails : Product?
+    var productDetails = Product()
     var productNumber : Int = 0
     var selectedProductColor = "red"
     var selectedProductSize = "L"
+    private var productCountValue = 0 {
+        didSet{
+            productCount.text = "\(productCountValue)"
+        }
+    }
     
+    private var productPriceValue = 0 {
+        didSet{
+            productPrice.text = "Price : \(productPriceValue)"
+
+        }
+    }
     
     //    init(productDetails : Product = Product()) {
     //        self.productDetails = productDetails
@@ -58,16 +75,13 @@ class DetailsVC: UIViewController {
     // MARK: functions
     
     private func configuerView(){
-        
-        guard let productDetails = productDetails else {
-            return
-        }
-        
+        productCountValue = 1
         productImage.image = UIImage(named: productDetails.image ?? "")
         productName.text = productDetails.name
         productDescription.text = productDetails.prodDescription
-        productPrice.text = "\(productDetails.price)"
+        productPriceValue = Int(productDetails.price)
     }
+    
     private func updataUi(){
         [grayColor,yellowColor,cyanColor,pinkColor].forEach { button in
             button?.addTarget(self, action: #selector(selectColorButton(sender:)), for: .touchUpInside)
@@ -77,11 +91,16 @@ class DetailsVC: UIViewController {
         }
         sizeButtonsProperties()
         detailsViewProperties()
+        
+        [inctreaseCounter,decreaseCounter].forEach { button in
+            button?.layer.cornerRadius = (button?.frame.width)! / 2
+            button?.layer.borderColor = UIColor.darkGray.cgColor
+            button?.layer.borderWidth = 0.8     }
     }
     @objc func selectColorButton(sender : UIButton){
         selectedProductColor = sender.accessibilityIdentifier ?? "red"
         setColorButtonsUnselected()
-        sender.setImage(UIImage(systemName: "circle.inset.filled"), for: .normal)
+        sender.setImage(UIImage(named: "pinkColor"), for: .normal)
     }
     @objc func selectSizeButton(sender : UIButton){
         selectedProductSize = sender.accessibilityIdentifier ?? "L"
@@ -118,10 +137,28 @@ class DetailsVC: UIViewController {
     // MARK: IBActions
     
     
+    @IBAction func decreaseProductCountButton(_ sender: Any) {
+        guard productCountValue > 1 else{
+            return
+        }
+        productCountValue -= 1
+        productPriceValue -= Int(productDetails.price )
+        removeFromCart(x: productDetails)
+    }
+    
+    @IBAction func increaseProductCountButton(_ sender: Any) {
+        productCountValue += 1
+        productPriceValue += Int(productDetails.price )
+        addToCart(x: productDetails)
+    }
+    
+    
+    
+    
     @IBAction func addToCartButton(_ sender: Any) {
         updateColor(productNumber: productNumber, productColor: selectedProductColor)
         updateSize(productNumber: productNumber, productSize: selectedProductSize)
-        addToCart(x: productDetails ?? Product())
+        addToCart(x: productDetails)
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func backButton(_ sender: Any) {
