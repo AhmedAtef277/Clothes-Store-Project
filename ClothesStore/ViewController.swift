@@ -31,11 +31,17 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("Hi")
         //signInButton.layer.cornerRadius = 15
-        
-        
+        self.navigationItem.hidesBackButton = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
     }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     @IBAction func logInButton(_ sender: Any) {
          guard let email = emailLogIn.text, let pass = passwordLogIn.text, email != "" && pass != ""
         else{ showAlert(msg: "Please enter your email & password!",vc:self)

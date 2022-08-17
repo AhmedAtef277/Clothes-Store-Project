@@ -17,8 +17,18 @@ class SeifViewController: ViewController {
    
     @IBOutlet weak var hiName: UILabel!
     @IBOutlet weak var productsCollectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        
+        
+        
         hiName.text = "Hi, \(theUser.name!)"
         if(!productsExists())
         {
@@ -47,13 +57,14 @@ class SeifViewController: ViewController {
         
         
       
-        self.tabBarController?.navigationItem.hidesBackButton = true
+       // self.tabBarController?.navigationItem.hidesBackButton = true
         
         
         
         
         // Do any additional setup after loading the view.
     }
+    
     
 }
 
