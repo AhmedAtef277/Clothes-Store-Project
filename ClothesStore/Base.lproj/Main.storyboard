@@ -73,7 +73,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oA-Yi-uGg">
-                                <rect key="frame" x="276.5" y="672" width="100.5" height="36"/>
+                                <rect key="frame" x="276.5" y="653" width="100.5" height="36"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Register">
@@ -84,7 +84,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4u-oD-rw4">
-                                <rect key="frame" x="61" y="672" width="205.5" height="36"/>
+                                <rect key="frame" x="61" y="653" width="205.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -108,10 +108,10 @@
                             <constraint firstItem="ODI-kp-FHK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="3FY-n6-I6w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EOh-xY-ZDZ" secondAttribute="trailing" constant="37" id="6aB-7x-tQr"/>
                             <constraint firstItem="WUq-Jk-aZx" firstAttribute="top" secondItem="ClF-Em-Wz3" secondAttribute="bottom" constant="66" id="FBr-51-aE7"/>
-                            <constraint firstItem="t4u-oD-rw4" firstAttribute="top" secondItem="EOh-xY-ZDZ" secondAttribute="bottom" constant="139" id="JQ5-jb-CFm"/>
+                            <constraint firstItem="t4u-oD-rw4" firstAttribute="top" secondItem="EOh-xY-ZDZ" secondAttribute="bottom" constant="120" id="JQ5-jb-CFm"/>
                             <constraint firstItem="EOh-xY-ZDZ" firstAttribute="top" secondItem="WUq-Jk-aZx" secondAttribute="bottom" constant="58" id="JfX-ro-Fr0"/>
                             <constraint firstItem="ODI-kp-FHK" firstAttribute="top" secondItem="ubQ-WF-2fA" secondAttribute="bottom" constant="8" symbolic="YES" id="Lh0-Ug-hH3"/>
-                            <constraint firstItem="4oA-Yi-uGg" firstAttribute="top" secondItem="EOh-xY-ZDZ" secondAttribute="bottom" constant="139" id="Lth-OX-3h9"/>
+                            <constraint firstItem="4oA-Yi-uGg" firstAttribute="top" secondItem="EOh-xY-ZDZ" secondAttribute="bottom" constant="120" id="Lth-OX-3h9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WUq-Jk-aZx" secondAttribute="trailing" constant="37" id="NBP-r8-0JG"/>
                             <constraint firstItem="4oA-Yi-uGg" firstAttribute="leading" secondItem="t4u-oD-rw4" secondAttribute="trailing" constant="10" id="P53-6Z-lRn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubQ-WF-2fA" secondAttribute="trailing" constant="87" id="POK-3K-V8U"/>
@@ -318,7 +318,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OJh-0V-YXF"/>
+        <segue reference="VZU-1d-4fs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
