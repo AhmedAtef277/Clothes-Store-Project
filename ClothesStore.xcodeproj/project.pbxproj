@@ -110,13 +110,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		042338C128A6BF6900783FD2 /* ProductModelGroup */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProductModelGroup;
-			sourceTree = "<group>";
-		};
 		04560E0028A5429800C9F1E2 = {
 			isa = PBXGroup;
 			children = (
@@ -143,15 +136,10 @@
 		04560E0B28A5429800C9F1E2 /* ClothesStore */ = {
 			isa = PBXGroup;
 			children = (
-				049E06AE28A588DD001C05B0 /* ProductOperationStoryboard.storyboard */,
-				042338C128A6BF6900783FD2 /* ProductModelGroup */,
+				04F212F628DB3BB500888BA9 /* ProductOperation */,
 				04560E0C28A5429800C9F1E2 /* AppDelegate.swift */,
 				04560E0E28A5429800C9F1E2 /* SceneDelegate.swift */,
 				04560E1028A5429800C9F1E2 /* ViewController.swift */,
-				045E15E928A696AF003876D7 /* ProfileVC.swift */,
-				049E06B028A597DC001C05B0 /* DetailsVC.swift */,
-				045E15EB28A6ED6D003876D7 /* CartVC.swift */,
-				045E15ED28A6F519003876D7 /* CartTableViewCell.swift */,
 				042338C428A7CC9300783FD2 /* ProductCells.swift */,
 				042338C228A6C0BA00783FD2 /* SeifStoryboard.storyboard */,
 				042CD29828A7F20100087724 /* SeifViewController.swift */,
@@ -165,6 +153,18 @@
 				042CD29C28A9337B00087724 /* productCoreDataFns.swift */,
 			);
 			path = ClothesStore;
+			sourceTree = "<group>";
+		};
+		04F212F628DB3BB500888BA9 /* ProductOperation */ = {
+			isa = PBXGroup;
+			children = (
+				049E06AE28A588DD001C05B0 /* ProductOperationStoryboard.storyboard */,
+				045E15E928A696AF003876D7 /* ProfileVC.swift */,
+				049E06B028A597DC001C05B0 /* DetailsVC.swift */,
+				045E15EB28A6ED6D003876D7 /* CartVC.swift */,
+				045E15ED28A6F519003876D7 /* CartTableViewCell.swift */,
+			);
+			path = ProductOperation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
