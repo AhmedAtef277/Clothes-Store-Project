@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Register: UIViewController {
+class register: UIViewController {
 
     @IBOutlet weak var nameSignUp: UITextField!
     @IBOutlet weak var emailSignUp: UITextField!
@@ -54,7 +54,7 @@ class Register: UIViewController {
         InsertUser(email: email, password: pass, name: name)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "logIn") as! ViewController
         self.navigationController?.pushViewController(vc, animated: true)
-        dismiss(animated: true)
+
     }
     /*
     // MARK: - Navigation

@@ -14,7 +14,12 @@ var user = NSEntityDescription.entity(forEntityName: "User",
 var theUser = User(entity: user, insertInto:nil)
 
 
-
+func showAlert(msg:String, vc:UIViewController)
+{
+    let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    vc.present(alert,animated: true,completion: nil)
+}
 
 class ViewController: UIViewController {
 
@@ -66,13 +71,7 @@ class ViewController: UIViewController {
     
     
     
-    func showAlert(msg:String, vc:UIViewController)
-    {
-        let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        vc.present(alert,animated: true,completion: nil)
-       
-    }
+    
 
         
         
