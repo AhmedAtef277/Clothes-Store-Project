@@ -97,6 +97,7 @@ class DetailsVC: UIViewController {
             button?.layer.borderColor = UIColor.darkGray.cgColor
             button?.layer.borderWidth = 0.8     }
     }
+    
     @objc func selectColorButton(sender : UIButton){
         selectedProductColor = sender.accessibilityIdentifier ?? "red"
         setColorButtonsUnselected()
@@ -161,6 +162,7 @@ class DetailsVC: UIViewController {
         addToCart(x: productDetails)
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         

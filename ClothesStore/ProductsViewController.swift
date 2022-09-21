@@ -1,5 +1,5 @@
 //
-//  SeifViewController.swift
+//  ProductsViewController.swift
 //  ClothesStore
 //
 //  Created by Seif Awad on 8/13/22.
@@ -12,7 +12,7 @@ var p = [String?]() //string for product images
 var t = [String?]() //string for product name
 var prPrices = [Int64]() //intfor product prices
 
-class SeifViewController: ViewController {
+class ProductsViewController: ViewController {
     
    
     @IBOutlet weak var hiName: UILabel!
@@ -50,6 +50,8 @@ class SeifViewController: ViewController {
         
         self.tabBarController?.navigationItem.hidesBackButton = true
 
+        self.modalPresentationStyle = .fullScreen
+        
         productsCollectionView.delegate = self
     
         
@@ -69,7 +71,7 @@ class SeifViewController: ViewController {
 }
 
     
-    extension SeifViewController: UICollectionViewDelegate, UICollectionViewDataSource
+    extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource
     {
         
         func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -100,7 +102,7 @@ class SeifViewController: ViewController {
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let selectedItem = products[indexPath.row]
                         
-            let detailsVC = UIStoryboard(name: "AhmedStoryboard", bundle: nil).instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
+            let detailsVC = UIStoryboard(name: "ProductDetailsAndCartAndProfileStoryboard", bundle: nil).instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
             detailsVC.productDetails = selectedItem
             detailsVC.productNumber = indexPath.row
             self.present(detailsVC, animated: true, completion: nil)

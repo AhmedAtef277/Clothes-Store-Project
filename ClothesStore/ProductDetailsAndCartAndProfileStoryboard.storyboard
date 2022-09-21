@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wPj-Pt-OMj">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +13,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="CVp-Ov-cyc">
             <objects>
-                <tabBarController id="wPj-Pt-OMj" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="wPj-Pt-OMj" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t2H-1Z-5oV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -30,10 +31,10 @@
             </objects>
             <point key="canvasLocation" x="-1287" y="261"/>
         </scene>
-        <!--SeifStoryboard-->
+        <!--ProductsStoryboard-->
         <scene sceneID="lTo-T9-UMl">
             <objects>
-                <viewControllerPlaceholder storyboardName="SeifStoryboard" id="n3S-oA-iaD" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ProductsStoryboard" id="n3S-oA-iaD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="bxM-pJ-DJj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LyO-HE-Jjz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -48,7 +49,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="clothesImage3" translatesAutoresizingMaskIntoConstraints="NO" id="Lb1-ne-ZCl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clothesImage3" translatesAutoresizingMaskIntoConstraints="NO" id="Lb1-ne-ZCl">
                                 <rect key="frame" x="0.0" y="44" width="375" height="345"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </imageView>
@@ -377,6 +378,7 @@
                             <constraint firstItem="ZrX-gI-XIX" firstAttribute="top" secondItem="Lb1-ne-ZCl" secondAttribute="bottom" constant="-40" id="gy0-0Z-Jg3"/>
                             <constraint firstItem="Lb1-ne-ZCl" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.425" id="l7g-Ld-Iqh"/>
                             <constraint firstItem="ZrX-gI-XIX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pkK-AD-OAF"/>
+                            <constraint firstItem="Lb1-ne-ZCl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="plc-bc-bx2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ev0-Hg-CDf"/>

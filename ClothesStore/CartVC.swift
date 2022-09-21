@@ -48,11 +48,18 @@ class CartVC: UIViewController {
     }
 
     @IBAction func checkoutButton(_ sender: Any) {
+       // showAlert(message: "Done Successfully", title: "Checkout")
         zeroCart()
         calculateTotalPrice = 0
         cartProductList = queryCart()
         cartTableView.reloadData()
     }
+//    private func showAlert(message:String, title : String)
+//    {
+//        let alert = UIAlertController(title: title, message:message, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//        present(alert, animated: true, completion: nil)
+//    }
     
 }
 extension CartVC : UITableViewDataSource {

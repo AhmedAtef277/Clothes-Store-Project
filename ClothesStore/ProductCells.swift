@@ -21,6 +21,9 @@ class ProductCells: UICollectionViewCell {
     
     @IBOutlet weak var productPriceLbl: UILabel!
     
+    
+    
+    
 }
 
 
